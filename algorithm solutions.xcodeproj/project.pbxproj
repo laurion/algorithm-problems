@@ -7,8 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0C3E94F3185649D8005D27A0 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C3E94F2185649D8005D27A0 /* main.cpp */; };
 		0C3E94F5185649D8005D27A0 /* algorithm_solutions.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 0C3E94F4185649D8005D27A0 /* algorithm_solutions.1 */; };
+		0CD47EC118568E2400B4CF7F /* patrate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0CD47EC018568E2400B4CF7F /* patrate.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -26,8 +26,9 @@
 
 /* Begin PBXFileReference section */
 		0C3E94EF185649D8005D27A0 /* algorithm solutions */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "algorithm solutions"; sourceTree = BUILT_PRODUCTS_DIR; };
-		0C3E94F2185649D8005D27A0 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		0C3E94F4185649D8005D27A0 /* algorithm_solutions.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = algorithm_solutions.1; sourceTree = "<group>"; };
+		0CD47EBF18567AA800B4CF7F /* patrate3.in */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = patrate3.in; sourceTree = "<group>"; };
+		0CD47EC018568E2400B4CF7F /* patrate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = patrate.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +61,8 @@
 		0C3E94F1185649D8005D27A0 /* algorithm solutions */ = {
 			isa = PBXGroup;
 			children = (
-				0C3E94F2185649D8005D27A0 /* main.cpp */,
+				0CD47EC018568E2400B4CF7F /* patrate.cpp */,
+				0CD47EBF18567AA800B4CF7F /* patrate3.in */,
 				0C3E94F4185649D8005D27A0 /* algorithm_solutions.1 */,
 			);
 			path = "algorithm solutions";
@@ -117,7 +119,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0C3E94F3185649D8005D27A0 /* main.cpp in Sources */,
+				0CD47EC118568E2400B4CF7F /* patrate.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -225,6 +227,7 @@
 				0C3E94FA185649D8005D27A0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
