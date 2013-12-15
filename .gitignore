@@ -16,3 +16,6 @@ algorithm solutions.xcodeproj/
 *.in
 *.out
 *.1
+*.pbxproj
+*.xcscheme
+DerivedData/
