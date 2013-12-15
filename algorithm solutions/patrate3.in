@@ -1,0 +1,74 @@
+10
+18.3350 44.1050
+91.3200 13.3600
+49.1500 50.6900
+35.9300 34.8700
+42.0900 17.6800
+9.1000 26.5100
+88.9000 53.1100
+51.5700 10.9400
+26.6950 17.2750
+74.9300 28.6800
+1 5
+4 6
+2 2
+5 3
+
+#define nume "patrate3"
+
+#ifndef INFOARENA
+#define fisier "../algorithm solutions/" nume
+#define DBG
+#else
+#define fisier nume
+#endif
+
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <algorithm>
+#include <unordered_set>
+#include <set>
+
+using namespace std;
+
+ifstream f(fisier".in");
+ofstream g(fisier".out");
+
+#ifdef DBG
+#define g cout
+#endif
+
+const double EPS=0.000001;
+int n,nr,i,j;
+struct Punct{double x,y;} A,B,v[1001];
+inline double modul(double x)
+{  return x<0 ? -x : x;}
+inline bool cmp(Punct P,Punct Q)
+{   if(modul(P.x-Q.x)<EPS) return P.y<Q.y;
+    return P.x<Q.x;
+}
+inline bool este(Punct A)
+{   int mij,st=1,dr=n;
+    while(st<=dr)
+    {   mij=(st+dr)/2;
+        if(modul(v[mij].x-A.x)<EPS && modul(v[mij].y-A.y)<EPS) return true;
+        if(cmp(v[mij],A)) st=mij+1; else dr=mij-1;
+    }
+    return false;
+}
+int main()
+{   f>>n;
+    for(i=1;i<=n;i++) f>>v[i].x>>v[i].y;
+    sort(v+1,v+n+1,cmp);
+    for(i=1;i<n;i++)
+        for(j=i+1;j<=n;j++)
+        {   A.x=v[i].x+v[i].y-v[j].y;
+            A.y=v[i].y+v[j].x-v[i].x;
+            B.x=v[j].x+v[i].y-v[j].y;
+            B.y=v[j].y+v[j].x-v[i].x;
+            if(este(A) && este(B)) nr++;
+        }
+    g<<nr/2<<"\n";
+    return 0;
+}
